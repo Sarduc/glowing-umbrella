@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour
 {
-    int speed = 5;
+    int speed = 3;
     [SerializeField]
     controler player;
     void Start()

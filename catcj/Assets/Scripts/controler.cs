@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class controler : MonoBehaviour
 {
     int speed = 10;
-    int score;
+    [SerializeField ]int score;
     public int vidillas = 3;
     void Start()
     {
@@ -31,6 +31,8 @@ public class controler : MonoBehaviour
         {
             SceneManager.LoadScene("game_over");
         }
+
+        
     }
 
     public void auchis()
@@ -44,6 +46,7 @@ public class controler : MonoBehaviour
         {
             pickup recogible = other.GetComponent<pickup>();
             score = score + 1;
+            speed = speed + score;
             recogible.redeploy();
         }
     }
