@@ -7,6 +7,7 @@ public class controler : MonoBehaviour
 {
     int speed = 10;
     int score;
+    public int vidillas = 3;
     void Start()
     {
         transform.position = new Vector3(0, -4, 0);
