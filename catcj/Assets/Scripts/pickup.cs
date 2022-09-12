@@ -6,11 +6,11 @@ public class pickup : MonoBehaviour
 {
     int speed = 5;
     [SerializeField]
-    GameObject player;
+    controler player;
     void Start()
     {
         transform.position = new Vector3(Random.Range(-4f, 4f), 9f, 0);
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = FindObjectOfType<controler>();
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class pickup : MonoBehaviour
     {
         transform.position = new Vector3(Random.Range(-8.75f, 8.75f), Random.Range(7f, 9f), 0);
 
-        
+        player.auchis();
         
     }
 }

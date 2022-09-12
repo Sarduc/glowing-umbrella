@@ -26,8 +26,17 @@ public class controler : MonoBehaviour
         {
             transform.position = new Vector3(9f, transform.position.y);
         }
+
+        if (vidillas <= 0)
+        {
+            SceneManager.LoadScene("game_over");
+        }
     }
 
+    public void auchis()
+    {
+        vidillas = vidillas - 1;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Pickupeado");
